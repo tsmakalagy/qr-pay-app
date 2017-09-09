@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.raiza.qrpay.MailAuthActivity"
+    android:background="@color/grey_100"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="?attr/colorPrimary"/>
+
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_100"
+        android:gravity="center_horizontal|top"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+
+        <ProgressBar
+            android:id="@+id/progress_view"
+            style="@style/Widget.AppCompat.MyProgressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:theme="@style/CircularProgress" />
+
+        <TextView
+            android:id="@+id/title_text_email_auth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/title_bottom_margin"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/sign_in"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/email_auth_fields"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/field_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_name"
+                        android:inputType="text" />
+
+                    <ImageButton
+                        android:id="@+id/clear_name"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_clear_black_24dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/field_email_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_email_address"
+                        android:inputType="textEmailAddress" />
+
+                    <ImageButton
+                        android:id="@+id/clear_email"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_clear_black_24dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/field_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/hint_password"
+                        android:inputType="numberPassword"
+                        android:maxLength="@integer/max_pass_length" />
+
+                    <ImageButton
+                        android:id="@+id/clear_password"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_clear_black_24dp" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="3.0">
+
+                <Button
+                    android:id="@+id/login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="@string/button_email_login"
+                    android:theme="@style/ThemeOverlay.MyDarkButton" />
+
+                <Button
+                    android:id="@+id/signup_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="@string/sign_up"
+                    android:theme="@style/ThemeOverlay.MyDarkButton" />
+
+                <LinearLayout
+                    android:id="@+id/c_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/phone_error_margin"
+                        android:text="@string/not_have_account" />
+
+                    <Button
+                        android:id="@+id/c_signup_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/ButtonLink"
+                        android:text="@string/sign_up" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/c_signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/phone_error_margin"
+                        android:text="@string/have_account" />
+
+                    <Button
+                        android:id="@+id/c_signin_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/ButtonLink"
+                        android:text="@string/sign_in" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/c_phone_auth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/phone_error_margin"
+                        android:text="@string/use_auth" />
+
+                    <Button
+                        android:id="@+id/c_phone_auth_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/ButtonLink"
+                        android:text="@string/phone_auth" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

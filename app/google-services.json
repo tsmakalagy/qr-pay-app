@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "925875583874",
+    "firebase_url": "https://qr-pay.firebaseio.com",
+    "project_id": "qr-pay",
+    "storage_bucket": "qr-pay.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:925875583874:android:9a35e8c299694079",
+        "android_client_info": {
+          "package_name": "com.raiza.qrpay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "925875583874-qn2jg8v49i9psq90piqe3v8n7fflf118.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raiza.qrpay",
+            "certificate_hash": "978f51d64dd9d6160364e9091507359a3326b53a"
+          }
+        },
+        {
+          "client_id": "925875583874-r3r0mfbnci41hq5hnclpnmmb43akt63m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdSvCL22G-dW7bkCOAxX1EtnxpUsM1f7E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "925875583874-r3r0mfbnci41hq5hnclpnmmb43akt63m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
